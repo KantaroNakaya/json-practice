@@ -1,0 +1,78 @@
+/* テーブルのような構造を作成 */
+.data {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+dl.outer {
+  display: table;
+  width: 48%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+dl.outer > dt, dl.outer > dd {
+  display: table-cell;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+dl.outer > dt.no {
+  width: 10px;
+  background-color: #f0f0f0;
+}
+
+dl.inner {
+  display: table;
+  width: 100%;
+}
+
+dl.inner > dt, dl.inner > dd {
+  display: table-cell;
+  padding: 5px;
+}
+
+dl.inner > dt {
+  width: 120px;
+  font-weight: bold;
+}
+
+p.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+p.small {
+  font-size: 14px;
+  color: #666;
+}
+
+.detail {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+}
+
+.document_area {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+
+@media screen and (max-width: 767px) {
+  .data{
+    flex-direction: column;
+  }
+  dl.outer {
+    width: 100%;
+  }
+  dl.inner{
+    display: flex;
+    flex-direction: column;
+  }
+}
